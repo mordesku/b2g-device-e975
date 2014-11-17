@@ -105,3 +105,7 @@ service fm_dl /system/bin/sh /system/etc/init.gee.fm.sh
     group system qcom_oncrpc
     disabled
     oneshot
+
+on early-init
+    start ueventd
+    import /init.b2g.rc
